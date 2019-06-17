@@ -1,21 +1,15 @@
 ---
 title: Hello World
-date: "2015-05-01T22:12:03.284Z"
+date: "2019-06-17T09:55"
 ---
 
-This is my first post on my new fake blog! How exciting!
+Let's be intentional about trying to write regularly.  What things do I want to try and write about?
 
-I'm sure I'll write a lot more interesting things in the future.
+* remote work
+* React
+* Javascript
+* DevOps (currently going through a big move at work to AWS and utlizing Istio/Envoy)
 
-Oh, and here's a great quote from this Wikipedia on
-[salted duck eggs](http://en.wikipedia.org/wiki/Salted_duck_egg).
+My goal is to publish something once a week.  I had an old site hosted on Github.com but TBH, I never did much with it.  Maybe I'll try to convert that Jekyll content over to this Gatsby site, though the world will probably not be a lesser place if that content stays where it's at.  
 
-> A salted duck egg is a Chinese preserved food product made by soaking duck
-> eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-> supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-> charcoal paste. The eggs may also be sold with the salted paste removed,
-> wrapped in plastic, and vacuum packed. From the salt curing process, the
-> salted duck eggs have a briny aroma, a gelatin-like egg white and a
-> firm-textured, round yolk that is bright orange-red in color.
-
-![Chinese Salty Egg](./salty_egg.jpg)
+As I mention above, I'm currently involved in a big project at work moving services over to AWS, a common deployment pipeline, and potentially being a point person on deploying Envoy into our existing microservices.  
