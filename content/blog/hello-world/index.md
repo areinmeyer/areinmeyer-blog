@@ -1,6 +1,7 @@
 ---
 title: Hello World
 date: "2019-06-17T09:55"
+description: "areinmeyer first post"
 ---
 
 Let's be intentional about trying to write regularly.  What things do I want to try and write about?

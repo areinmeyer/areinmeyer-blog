@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Allen Reinmeyer's blog`,
+    title: `areinmeyer.dev`,
     author: `Allen Reinmeyer`,
-    description: `Random musings on random topics`,
-    siteUrl: `https://areinmeyer.com/blog`,
+    description: `Random musings on random topics from a random developer`,
+    siteUrl: `https://areinmeyer.dev/blog`,
     social: {
       twitter: `areinmeyer`,
     },
