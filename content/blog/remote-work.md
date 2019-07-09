@@ -1,7 +1,8 @@
 ---
 title: Working remote
 description: Priorities and balance in life and work
-date: 
+date: "2019-07-01"
+tags: ["remote", "worklife"] 
 ---
 
 Since late 2015, I've worked 100% remote at my current employer, SAP Concur.  I couldn't be happier doing this.  In going remote, I made the choice to step away from a management role and to instead move to a different team as a Senior Developer, working in React/NodeJS on a greenfield project.  I had an itch to scratch on getting back into full development and especially into web development.  That I'd be working with a team on the other side of the country and be able to go fully remote was a no-brainer as well.  
