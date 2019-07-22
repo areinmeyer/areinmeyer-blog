@@ -5,7 +5,7 @@ import Wordpress2016 from "typography-theme-wordpress-2016"
 
 Wordpress2016.overrideThemeStyles = () => ({
   a: {
-    color: "var(--textLink)",
+    color: "#007acc",
   },
   hr: {
     background: "var(--hr)",
