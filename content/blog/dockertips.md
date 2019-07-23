@@ -35,16 +35,16 @@ Wihtout the `-a` parameter, this shows you all of the running containers.  Add t
 
 ### Remove all unused images
 ```shell
-docker rmi...
+docker rmi $(docker images -q -f "dangling=true")
 ```
-Did you know that 
+If I was smarter about setting up cron jobs, I would have this command run about every 2 weeks.  Everytime you build a docker image locally, each step in your dockerfile creates an image.  Most of the time the intermediate layers are removed but untagged images can remain with errors or interupted builds.  Docker doesn't do a great job of cleaning up those images and they persist until either your disk fills up or you remove them.  
+
+This command gets a list of all your image ids in docker locally (`docker images -q`) and displays only the untagged leaves (`-f "dangling=treu"`).  Those are then removed with the `docker rmi` command.  The nice part of this is that docker will warn and skip deleting any images that are in use from a container.  So it's a relatively safe command to run.
 
 ### See all processes running in a container without logging into the container
 ```shell
-docker top
+docker top <name>
 ```
+Don't want to exec into a container just to see what's running?  Open up a tmux window or a new terminal window and run this command.  Much like unix's `top`, it'll take over your window (hence my new window suggestion!) and show you processes running on the container you've specified.  Really handy for seeing what processes get spawned (or not) in the container.  Also handy to see why my Macbook's fan suddenly kicked in.  This helped start me on the path to tuning a container that was running out of memory and getting OOMKilled in kubernetes.  I could recreate locally and troubleshoot the issue.
 
-### Clean up your cache in the same command you install
-```shell
-yum install && yum remove
-``` (not the real command!!)
+None of these commands are revolutionary or dreamed up by me.  Most I found by googling and reading the docker docs.  Maybe though I've helped you, dear reader, save a few hours by compiling them together in one shot?  Some came with little explanation, so my hope is I've now provided a better understanding of what these do.
