@@ -1,3 +1,9 @@
+---
+title: The Phoenix Project
+description: Review of the DevOps novel, The Phoenix Project
+date: "2019-11-11"
+tags: ["devops", "books"] 
+---
 ### Phoenix Project
 
 The Phoenix Project is a novel that acts as a DevOps fable, showing the reader how embracing the new concepts introduced in the [DevOps Handbook](https://www.amazon.com/DevOps-Handbook-World-Class-Reliability-Organizations-ebook/dp/B01M9ASFQ3/ref=pd_sim_351_1/140-7025719-0551636?_encoding=UTF8&pd_rd_i=B01M9ASFQ3&pd_rd_r=95c60d0d-e218-41ef-a817-6b0dd9a90628&pd_rd_w=XSGh8&pd_rd_wg=ZNzHt&pf_rd_p=5abf8658-0b5f-405c-b880-a6d1b558d4ea&pf_rd_r=T7H28R5YFTFJ5PWZ44J5&psc=1&refRID=T7H28R5YFTFJ5PWZ44J5) can save your sanity and work-life like Continuous Delivery/Continuous Integration.  
