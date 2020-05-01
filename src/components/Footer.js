@@ -29,7 +29,7 @@ function Footer() {
                 </a>
               </div>
               <div className="footerItem">
-                <a href={social.twitter}>
+                <a href={`https://twitter.com/${social.twitter}`}>
                   <Image
                     fixed={data.twitterIcon.childImageSharp.fixed}
                     alt="Github profile"
