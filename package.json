@@ -8,7 +8,7 @@
     "url": "https://github.com/areinmeyer/areinmeyer-blog.git/issues"
   },
   "dependencies": {
-    "gatsby": "^2.19.45",
+    "gatsby": "^2.32.13",
     "gatsby-image": "^2.2.38",
     "gatsby-plugin-canonical-urls": "^2.3.1",
     "gatsby-plugin-feed": "^2.3.26",
