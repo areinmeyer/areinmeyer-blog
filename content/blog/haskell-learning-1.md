@@ -1,3 +1,9 @@
+---
+title: Learning Haskell for fun
+date: "2022-12-01"
+description: "A Haskell learning journey to be a better JavaScript Developer"
+tags: ["haskell", "javascript"]
+---
 # Haskell Learning
 
 As a way to challenge me and stretch my programming skills, I’ve decided to embark on a Haskell learning journey.  Haskell is often hailed as one of the best ways to learn Functional Programming, wherein a developer builds small pure functions and composes them together to form larger bodies of structure and meaning.  It is very different from Object-Oriented Programming, where objects in code represent a concept like a blog post or a comment on a page.  One of the reasons to learn Haskell for me is to become a better JavaScript programmer, which has been my main programming language for the last 7 years.  Many of the concepts learned in Haskell like partial application, pure functions, lambdas, etc are very possible in JavaScript without any add-on libraries.  If you include Typescript as part of the JavaScript ecosystem, Haskell’s strong typing can also be a concept that transfers over.
