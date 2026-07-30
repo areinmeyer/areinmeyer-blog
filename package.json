@@ -1,0 +1,45 @@
+{
+  "name": "areinmeyer-blog",
+  "private": true,
+  "description": "Allen Reinmeyer personal blog",
+  "version": "0.2.0",
+  "author": "Allen Reinmeyer",
+  "bugs": {
+    "url": "https://github.com/areinmeyer/areinmeyer-blog.git/issues"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^20.11.17",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "@vercel/analytics": "^1.1.3",
+    "@vercel/speed-insights": "^1.0.9",
+    "classnames": "^2.5.1",
+    "geist": "1.7.2",
+    "next": "^16.2.12",
+    "next-mdx-remote": "^6.0.0",
+    "postcss": "^8.5.25",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "sugar-high": "^0.6.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5"
+  },
+  "homepage": "https://github.com/areinmeyer/areinmeyer-blog#readme",
+  "keywords": [
+    "blog",
+    "nextjs",
+    "netlify"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/areinmeyer/areinmeyer-blog.git"
+  }
+}
