@@ -41,5 +41,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/areinmeyer/areinmeyer-blog.git"
+  },
+  "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.15.13"
   }
 }
