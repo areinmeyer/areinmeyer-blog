@@ -6,8 +6,10 @@ import cn from 'classnames';
 import { Navbar } from './components/nav'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { ThemeProvider } from './providers/themeProvider'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
+import { ThemeSelector } from './components/ThemeSelector';
 
 const merriweather = Merriweather({ weight: ["400", "700"], subsets: ["latin"] });
 const montserrat = Montserrat({ subsets: ["latin"] });
@@ -51,15 +53,26 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(merriweather.className, "dark:bg-slate-900 dark:text-slate-400")}
+      suppressHydrationWarning
     >
       <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
-          <Navbar />
-          {children}
-          <Footer />
-          <Analytics />
-          <SpeedInsights />
-        </main>
+        <ThemeProvider
+          attribute="data-mode"
+          defaultTheme="system"
+          enableSystem
+          // disableTransitionOnChange
+        >
+          <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+            <div className="absolute top-4 right-4">
+              <ThemeSelector />
+            </div>
+            <Navbar />
+            {children}
+            <Footer />
+            <Analytics />
+            <SpeedInsights />
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   )
