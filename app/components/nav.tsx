@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import {ThemeSelector} from './ThemeSelector'
 
 const navItems = {
   '/': {
@@ -6,9 +7,6 @@ const navItems = {
   },
   '/blog': {
     name: 'blog',
-  },
-  'https://vercel.com/templates/next.js/portfolio-starter-kit': {
-    name: 'deploy',
   },
 }
 
@@ -32,6 +30,7 @@ export function Navbar() {
                 </Link>
               )
             })}
+            {/* <ThemeSelector /> */}
           </div>
         </nav>
       </div>
