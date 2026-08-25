@@ -1,0 +1,58 @@
+---
+title: Migrating from Gatsby to Next.js
+publishedAt: '2026-07-31'
+summary: 'Steps to take to migrate from Gatsby to Next.js'
+tags: ['nextjs', 'javascript']
+author:
+  name: Allen Reinmeyer
+  picture: '/assets/blog/authors/allen.jpg'
+---
+
+In dusting off the blog and wanting to get back into writing, I realized that I had let my blog tech stack wither.  I was running out-dated versions of Node.js, Gatsby and Gatsby-related plugins.  Additionally, since my last 3 years have been heavy in the platform/API world, digging into React again would be a good refresher.  I opted, for all intents and purpose, to rebuild from scratch my blog into a Next.js stack.  What little front-end work I had done on the side had been one-off Next.js sites, so that was a good fit.
+
+Here were some initial goals:
+* Rebuild from scratch, saving only the previous blog posts
+* Simplify to where I could understand what was happening under-the-hood
+* Try to avoid having an AI Agent do the work to hone React/CSS skills
+* Get to a point where I can easily write again, without much overhead
+
+## Rebuild from scratch
+
+The landscape around best practices, current versions and tooling changes quickly in modern development, and by letting my site grow stale over the last couple of years, there was a lot of work to do.  I was running on an unsecure version of Node.js (v10), React 16 and several `gatsby` plugins that were no longer supported.  Getting the Node.js version updated was easy, but after that minor step, reality set back in.
+
+It quickly became apparent that incremental updates or trying to section off updates, like updating React and not Gatsby or vice-versa were not going to work.  Jumping major versions also became challenging with Gatsby as the plugin ecosystem was tied strongly to the Gatsby version.
+
+I considered rebuilding the site with Gatsby from scratch, but I knew Next.js did not rely on plugins as much and so future maintenance might be easier.  Also since a rebuild was now the best option, using a new framework was not a heavy lift as then I would just need to port my markdown files over to the new structure.
+
+## Simplify and understand
+
+I tried out a couple of the templates that Next.js has and liked the [blog starter site](https://vercel.com/templates/other/blog-starter-kit).  It has nice image support, a good home page layout, and dark mode built in.  However, it did not have MDX support, and while the author setup was nice with the pics, it's not like anyone else is going to be writing here.  So I opted for the [portfolio site](https://portfolio-blog-starter.vercel.app/) instead.  It was simpiler, with no images, no dark mode and basic layouts.  What drew me to it though was that simplicity.  I could add my own desired features without bloat.  The only thing I really changed at first was adding MDX support as I knew I would have a lot of code samples and I wanted the flexibility to adjust that as necessary.
+
+I ran the `create-next-app` command in a different folder and moved my Markdown files into the new repo.  Clearing out the example content I had my site now working in Next.js!  Adding Markdown support was pretty easy too.  I added a MDX file, similar to the one that the portfolio example used and added that to the top-level `page.tsx` component that accepted the post content. Then I renamed all the Markdown files from `.md` to `.mdx`.  A few references had to be updated or removed in the Markdown, mainly outdated GIF links or images that no longer were needed. I fiddled with the dark mode theme a lot more, and that will probably be a follow-up post to go into more detail than I want to here. The final piece was updating settings in Netlify to switch the build process from Gatsby to Next.js.  That went suprisingly well.  I had to add a package from Netlify.
+
+## Avoid AI (for now)
+Why would I want to avoid AI when all the trends are moving towards more adoption and leaning into AI more?  At my day job, I use Claude and Copilot frequently, our teams have carte blanche to use AI tooling as much as possible, especially when using planning or spec-based design.  But since I wanted to catch-up on React and dive into Tailwind CSS as part of this journey, it didn't make as much sense to lean on AI to do the migration rather than be able to make changes directly so I could stumble around a bit before landing on the correct solution.  I tend to learn best by implementing code myself, making errors and seeing why something did not work as opposed to seeing a working solution and parsing out why it works.
+
+I'll lean into AI later as I implement new features, especially when I get to adding back in images and other visual components.
+
+## Posting schedules
+
+I may do a separate post on a future roadmap of the technical aspects I want to change for my site. It's easy to fall into tweaking the site and making adjustments or improvements to themes, features, or other ephemera but the reality is if I'm not posting content, I'm just twiddling knobs and that is less fulfilling to me.  I can easily fall into a trap of worrying whether or not posts are "good" enough, and get into a state of permanent revision.  I hope to start into a good cadence of writing and then once a month adding new features or adjusting styles.
+
+## Notes:
+
+- Had to do some work to update Netlify to support Next.js as opposed to Gatsby.
+
+## Next items on the roadmap
+
+- Get a better theme for the code samples
+- Apply a dark mode option to the overall site.
+  - This kinda works. List of posts doesn't update font
+  - Footer doesn't update in dark mode
+  - Add the previous little circle option
+- Support better image display (Banners, thumbnails on Home page)
+- A better cover page for All Posts
+- Icons for Github/RSS links, add Bluesky link
+- Get better frontmatter integration
+
+## TODO on this post
